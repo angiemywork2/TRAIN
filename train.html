@@ -178,9 +178,23 @@
   		//var minAwayHold = moment(nextArrival).fromNow();
   		//var minAway = moment(minAwayHold).format("LT");
 
+  		//var minAwayCT = moment(currentTime, "m");
+  		//var minAwayNA = moment(nextArrival, "m");
+  		//console.log("CT Minutes: " + minAwayCT + " Next Arrival mins: " + minAwayNA);
+  		//var minAwayCal= moment(minAwayNA).subtract(minAwayCT);
+  		//var minAwayCal2 = moment(minAwayCal).format('h');
+  		//console.log("calculation is: " +minAwayCal2);
   		var minAwayHold = moment(currentTime, "LT").subtract(nextArrival, "LT");
   		var minAwayTrain = moment(minAwayHold, "LT");
   		var minAway = moment(minAwayTrain).format('m');
+  		var minAway2 = moment().subtract(nextArrival);
+  		console.log("Min away2 is: " + minAway2);
+  		//var minAway3 = moment(minAway2).format('m');
+			var minAway3 = moment().fromNow(nextArrival, 'm');
+  		console.log("min away3 is: " +minAway3);
+
+  		//var trainTime = moment().diff(snapFrequency);
+  		//console.log(trainTime);
 
 
   		console.log("Minute Away HOLD is: " + minAwayHold);

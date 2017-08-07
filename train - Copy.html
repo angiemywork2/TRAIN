@@ -233,10 +233,9 @@
       // Next Train
       var nextTrain = moment().add(tMinutesTillTrain, "minutes");
       console.log("ARRIVAL TIME: " + moment(nextTrain).format("hh:mm"));
-      var nextTrain2 = moment(nextTrain).format("hh:mm");
 
        // Change the HTML to reflect
-      var tableAdd = "<tr><td>"+snapTrainName+"</td><td>"+snapDestination+"</td><td>"+snapFrequency+"</td><td>"+nextTrain2+"</td><td>"+tMinutesTillTrain+"</td></tr>";
+      var tableAdd = "<tr><td>"+snapTrainName+"</td><td>"+snapDestination+"</td><td>"+snapFrequency+"</td><td>"+nextArrival+"</td><td>"+tMinutesTillTrain+"</td></tr>";
       console.log(tableAdd);
       $('#tableBody').append(tableAdd);
      
